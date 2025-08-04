@@ -33,3 +33,11 @@ def create_question(data,question=None, answer=None, ):
     return result
 
 
+def create_new_word():
+    prompt_reading = ('Я хочу выучить 5 английских слов, которые встречаються в програмировании. Дай мне 5 слов и через "-" их перевод'
+                      'ответь в формате: "5 английских слов:')
+    responses = client.models.generate_content(
+        model="gemini-1.5-flash", contents=prompt_reading
+    )
+    result = responses.text
+    return result

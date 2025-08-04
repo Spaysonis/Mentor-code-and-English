@@ -1,12 +1,11 @@
 from aiogram.filters import CommandStart
-
+from aiogram.types import Message
+from aiogram import Router
 
 from BotTelegram.keyboard.keyboard import main_menu as kb_main
 
 
 
-from aiogram.types import Message
-from aiogram import Router
 
 router = Router()
 
